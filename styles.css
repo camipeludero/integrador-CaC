@@ -107,3 +107,14 @@ background: linear-gradient(90deg, rgba(28,54,67,1) 0%, rgba(29,82,113,1) 100%);
     text-decoration: none;
     font-weight: bold;
 }
+
+/* Tickets */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
