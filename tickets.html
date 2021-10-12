@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" href="images/favicon.png" type="image/x-icon" />
@@ -69,36 +69,44 @@
                 <h1 class="h4">VALOR DE TICKET $200</h1>
               </div>
               
-  <form class="formulario row g-3 col-md-6 mx-auto" onsubmit="">
+  <form class="formulario row g-3 col-md-6 mx-auto">
     <div class="col-md-6 p-1">
-      <input type="text" class="form-control" id="nombre" placeholder="Nombre">
+      <input type="text" class="form-control" id="nombre" placeholder="Nombre" required>
+      <div class="validation">
+      </div>
     </div>
     <div class="col-md-6 p-1">
-      <input type="text" class="form-control" id="apellido" placeholder="Apellido">
+      <input type="text" class="form-control" id="apellido" placeholder="Apellido" required>
+      <div class="validation">
+      </div>
     </div>
     <div class="col-12 p-1">
-        <input type="email" class="form-control" id="email" placeholder="Correo">
+        <input type="email" class="form-control" id="email" placeholder="Correo" required>
+        <div class="validation">
+        </div>
     </div>
     <div class="col-md-6 p-1">
-        <input type="number" class="form-control" id="cantidad" min="0" max="100" placeholder="Cantidad">
+        <input type="number" class="form-control" id="cantidad" min="1" max="100" placeholder="Cantidad" required>
       </div>
       <div class="col-md-6 p-1">
         <select class="form-select">
-            <option selected value="estudiante">Estudiante</option>
+            <option selected value="sinDesc">Seleccionar</option>
+            <option value="estudiante">Estudiante</option>
             <option value="trainee">Trainee</option>
             <option value="junior">Junior</option>
           </select>
       </div>
     <div class="col-12 p-1">
         <div class="alert alert-primary" role="alert">
-            Total a Pagar: $
+            Total a Pagar:
+            <span class="precio h4"></span>
           </div>
     </div>
     <div class="col-6 d-grid gap-2 p-1">
-      <button type="submit" class="btn btn-outline-secondary">Borrar</button>
+      <button type="button" id="borrar" class="btn btn-outline-secondary">Borrar</button>
     </div>
     <div class="col-6 d-grid gap-2 p-1">
-        <button type="submit" class="btn" style="background-color: #96c93e;
+        <button type="submit" class="btn" id="resumen" style="background-color: #96c93e;
         color: #fff;
         font-weight: bold">Resumen</button>
       </div>
@@ -106,7 +114,20 @@
         </div><!--venta-->
     </div>
     </section>
+    <footer class="py-3">
+      <ul class="nav justify-content-center pb-3 mb-3">
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Preguntas Frecuentes</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Contactanos</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Prensa</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Conferencias</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Terminos y condiciones</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Privacidad</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Estudiantes</a></li>
+      </ul>
+    </footer>
+  </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="index.js"></script>
 </body>
 
